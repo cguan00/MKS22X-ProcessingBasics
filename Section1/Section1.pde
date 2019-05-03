@@ -47,6 +47,8 @@ class Visualizer {
 
 
     //Width of the visualizer is 400!
+    
+    point(x.y);
 
   
   }
