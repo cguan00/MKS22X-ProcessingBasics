@@ -51,15 +51,10 @@ class Visualizer {
      for(int i = 0; i < values.length; i++){
        if(values[i] > 0){
          fill(0, 255, 0);
-       }
-       if(values[i] < 0){
+       }else if(values[i] < 0){
          fill(255, 0, 0);
        }
-       if(i > 0){
-         rect(x + width / 1, y + 100, width / 10, values[i]);
-       } else{
-         rect(x, y + 100, width / 10, values[i]);
-       }
+       rect(x + (400 / 10) * i, y + MAX_VALUE, (400 / 10), -values[i]);
      }
        
   
