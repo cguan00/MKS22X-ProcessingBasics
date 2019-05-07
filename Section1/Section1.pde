@@ -49,12 +49,16 @@ class Visualizer {
     //Width of the visualizer is 400!
      
      for(int i = 0; i < values.length; i++){
-       if(values[i] > 0){
-         fill(0, 255, 0);
-       }else if(values[i] < 0){
-         fill(255, 0, 0);
-       }
-       else{
+       if (values[i] > MAX_VALUE/2){
+        fill(0, 255, 0);
+      }
+      else if (values[i] > 0){
+        fill(255, 255, 0);
+      }
+      else if (values[i] > MIN_VALUE/2){
+        fill(255, 168, 0);
+      }
+      else{
         fill(255, 0, 0);
       }
        rect(x + (400 / 10) * i, y + MAX_VALUE, (400 / 10), -values[i]);
